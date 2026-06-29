@@ -48,6 +48,8 @@ export default function Courses() {
                 <span>·</span>
                 <span>{c.term}</span>
                 <span>·</span>
+                <span className="course-hours">约 {c.hours}h</span>
+                <span>·</span>
                 <span className="course-xp">+{c.xp} XP</span>
               </div>
 

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { roadmap } from '../data/roadmap.js'
 import { getCourseById } from '../data/courses.js'
 import { useProgress } from '../context/ProgressContext.jsx'
+import TimeEstimator from '../components/TimeEstimator.jsx'
 
 export default function Home() {
   const { isCompleted } = useProgress()
@@ -99,6 +100,15 @@ export default function Home() {
             )
           })}
         </div>
+      </section>
+
+      {/* Time estimator */}
+      <section className="section">
+        <div className="section-head">
+          <h2>用时评估</h2>
+          <p>按你每周能投入的时间，估算学完整条路径需要多久。</p>
+        </div>
+        <TimeEstimator />
       </section>
 
       {/* Module entries */}
